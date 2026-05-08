@@ -20,8 +20,12 @@ app.use((req, res, next) => {
 // Routes
 app.use('/api/employees', employeeRoutes);
 
-// Server Start (Using local JSON storage as primary for reliability in this environment)
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-    console.log(`Data is being stored locally in server/data.json`);
-});
+// Export for Vercel
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+        console.log(`Data is being stored locally in server/data.json`);
+    });
+}
+
+module.exports = app;

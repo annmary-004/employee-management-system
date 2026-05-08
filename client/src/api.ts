@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/employees';
+const API_URL = '/api/employees';
 
 export const getEmployees = () => axios.get(API_URL);
 export const getEmployeeById = (id: string) => axios.get(`${API_URL}/${id}`);

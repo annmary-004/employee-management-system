@@ -1,0 +1,8 @@
+node_modules
+.env
+dist
+server/data.json
+.tempmediaStorage
+.gemini
+package-lock.json
+client/package-lock.json

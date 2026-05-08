@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Users, 
   Search, 
   Edit2, 
   Trash2, 
-  RefreshCw,
-  Plus,
-  Cpu
+  RefreshCw, 
+  Plus, 
+  Cpu 
 } from 'lucide-react';
 import * as api from './api';
 import TrafficLightController from './components/TrafficLightController';
@@ -169,7 +169,7 @@ function App() {
                 </thead>
                 <tbody>
                   <AnimatePresence mode="popLayout">
-                    {employees.map((emp) => (
+                    {employees.map((emp: Employee) => (
                       <motion.tr 
                         key={emp.employeeId}
                         initial={{ opacity: 0, scale: 0.98 }}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AlertTriangle, Info, Settings2 } from 'lucide-react';
+import { AlertTriangle, Info } from 'lucide-react';
 
 const TrafficLightController: React.FC = () => {
   const [currentSignal, setCurrentSignal] = useState<'RED' | 'YELLOW' | 'GREEN'>('RED');
